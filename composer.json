@@ -1,0 +1,24 @@
+{
+	"name": "clevercanyon/wpgroove-unique-attachment-slugs",
+	"prefer-stable": true,
+	"minimum-stability": "dev",
+	"config": {
+		"process-timeout": 0,
+		"optimize-autoloader": true
+	},
+	"require-dev": {
+		"clevercanyon/wpgroove-framework": "dev-main",
+		"clevercanyon/wpgroove-framework-dev": "dev-main"
+	},
+	"autoload-dev": {
+		"files": [ "./.trunk.php" ]
+	},
+	"scripts": {
+		"post-update-cmd": [
+			"[ $COMPOSER_DEV_MODE -eq 0 ] || ./vendor/clevercanyon/wpgroove-framework-dev/src/toolchain/composer/post-update-cmd.php"
+		],
+		"run-project-tests": [
+			"XDEBUG_MODE=coverage phpunit --configuration ./.phpunit.xml --testsuite tests"
+		]
+	}
+}
