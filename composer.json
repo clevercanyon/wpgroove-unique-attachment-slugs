@@ -1,24 +1,30 @@
 {
-	"name": "clevercanyon/wpgroove-unique-attachment-slugs",
-	"prefer-stable": true,
-	"minimum-stability": "dev",
-	"config": {
-		"process-timeout": 0,
-		"optimize-autoloader": true
+	"name"              : "clevercanyon/wpgroove-unique-attachment-slugs",
+	"prefer-stable"     : true,
+	"minimum-stability" : "dev",
+	"config"            : {
+		"allow-plugins": {
+			"dealerdirect/phpcodesniffer-composer-installer": true
+		}
 	},
-	"require-dev": {
-		"clevercanyon/wpgroove-framework": "dev-main",
-		"clevercanyon/wpgroove-framework-dev": "dev-main"
+	"require-dev"       : {
+		"clevercanyon/wpgroove-framework-dev" : "dev-main"
 	},
-	"autoload-dev": {
-		"files": [ "./.trunk.php" ]
+	"autoload-dev"      : {
+		"files"                                       : [ "./.trunk.php" ],
+		"WP_Groove\\Unique_Attachment_Slugs__Tests\\" : "./tests/classes"
 	},
-	"scripts": {
-		"post-update-cmd": [
+	"scripts"           : {
+		"post-update-cmd"   : [
 			"[ $COMPOSER_DEV_MODE -eq 0 ] || ./vendor/clevercanyon/wpgroove-framework-dev/src/toolchain/composer/post-update-cmd.php"
 		],
-		"run-project-tests": [
-			"XDEBUG_MODE=coverage phpunit --configuration ./.phpunit.xml --testsuite tests"
+		"run-project-tests" : [
+			"./vendor/bin/phpunit --configuration ./.phpunit.xml --testsuite tests"
 		]
+	},
+	"extra"             : {
+		"clevercanyon" : {
+			"$extends-packages" : [ "clevercanyon/wpgroove-framework-dev" ]
+		}
 	}
 }
