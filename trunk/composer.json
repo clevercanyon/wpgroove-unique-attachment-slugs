@@ -3,6 +3,9 @@
 	"prefer-stable"     : true,
 	"minimum-stability" : "dev",
 	"config"            : {
+		"platform"           : {
+			"php-64bit" : "7.4.0"
+		},
 		"prepend-autoloader" : false
 	},
 	"require"           : {
