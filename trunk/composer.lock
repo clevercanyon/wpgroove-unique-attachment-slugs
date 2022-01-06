@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/clevercanyon/php-chalk.git",
-                "reference": "b4ec1ca9c80cb063fcf4baea7f894efd31b03cbf"
+                "reference": "30a4f16aa0dbedb1c933d87ee2582ac9422335e2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/clevercanyon/php-chalk/zipball/b4ec1ca9c80cb063fcf4baea7f894efd31b03cbf",
-                "reference": "b4ec1ca9c80cb063fcf4baea7f894efd31b03cbf",
+                "url": "https://api.github.com/repos/clevercanyon/php-chalk/zipball/30a4f16aa0dbedb1c933d87ee2582ac9422335e2",
+                "reference": "30a4f16aa0dbedb1c933d87ee2582ac9422335e2",
                 "shasum": ""
             },
             "require": {
@@ -52,7 +52,7 @@
                 "issues": "https://github.com/clevercanyon/php-chalk/issues",
                 "source": "https://github.com/clevercanyon/php-chalk/tree/main"
             },
-            "time": "2022-01-04T00:34:22+00:00"
+            "time": "2022-01-05T12:35:37+00:00"
         },
         {
             "name": "clevercanyon/php-js-utilities",
@@ -60,12 +60,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/clevercanyon/php-js-utilities.git",
-                "reference": "b72645452d59e37586c74a48c7d04b6b82c5d8ef"
+                "reference": "213d43d7a371d0040a77cfe8546b480206e36b55"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/clevercanyon/php-js-utilities/zipball/b72645452d59e37586c74a48c7d04b6b82c5d8ef",
-                "reference": "b72645452d59e37586c74a48c7d04b6b82c5d8ef",
+                "url": "https://api.github.com/repos/clevercanyon/php-js-utilities/zipball/213d43d7a371d0040a77cfe8546b480206e36b55",
+                "reference": "213d43d7a371d0040a77cfe8546b480206e36b55",
                 "shasum": ""
             },
             "require": {
@@ -95,6 +95,13 @@
                                     "bucket": "clevercanyon",
                                     "cdn_domain": "cdn.clevercanyon.com"
                                 }
+                            }
+                        },
+                        "scoper": {
+                            "cfg": {
+                                "exclude-constants": [],
+                                "exclude-classes": [],
+                                "exclude-functions": []
                             }
                         },
                         "post_update_cmd_handler": {
@@ -135,7 +142,7 @@
                 "issues": "https://github.com/clevercanyon/php-js-utilities/issues",
                 "source": "https://github.com/clevercanyon/php-js-utilities/tree/main"
             },
-            "time": "2022-01-04T02:23:43+00:00"
+            "time": "2022-01-06T01:52:30+00:00"
         },
         {
             "name": "clevercanyon/wpgroove-framework",
@@ -143,12 +150,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/clevercanyon/wpgroove-framework.git",
-                "reference": "3f25c5f04a7e69740f128e79dde4a6981db6aa01"
+                "reference": "ae5b6e8ee1164c0afc6e79d841dd2b0336eae159"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/clevercanyon/wpgroove-framework/zipball/3f25c5f04a7e69740f128e79dde4a6981db6aa01",
-                "reference": "3f25c5f04a7e69740f128e79dde4a6981db6aa01",
+                "url": "https://api.github.com/repos/clevercanyon/wpgroove-framework/zipball/ae5b6e8ee1164c0afc6e79d841dd2b0336eae159",
+                "reference": "ae5b6e8ee1164c0afc6e79d841dd2b0336eae159",
                 "shasum": ""
             },
             "require": {
@@ -174,6 +181,13 @@
                                     "bucket": "wpgroove",
                                     "cdn_domain": "cdn.wpgroove.com"
                                 }
+                            }
+                        },
+                        "scoper": {
+                            "cfg": {
+                                "exclude-constants": [],
+                                "exclude-classes": [],
+                                "exclude-functions": []
                             }
                         },
                         "post_update_cmd_handler": {
@@ -210,20 +224,20 @@
                 "issues": "https://github.com/clevercanyon/wpgroove-framework/issues",
                 "source": "https://github.com/clevercanyon/wpgroove-framework/tree/main"
             },
-            "time": "2022-01-04T02:24:55+00:00"
+            "time": "2022-01-06T01:53:06+00:00"
         },
         {
             "name": "ulrichsg/getopt-php",
-            "version": "v4.0.0",
+            "version": "v4.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/getopt-php/getopt-php.git",
-                "reference": "073e809a5a4811b0caec43a2151b0e8ccbe29e4b"
+                "reference": "ad9e8cdf1b709caf84ca545ff90bcc7298f0fa5a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/getopt-php/getopt-php/zipball/073e809a5a4811b0caec43a2151b0e8ccbe29e4b",
-                "reference": "073e809a5a4811b0caec43a2151b0e8ccbe29e4b",
+                "url": "https://api.github.com/repos/getopt-php/getopt-php/zipball/ad9e8cdf1b709caf84ca545ff90bcc7298f0fa5a",
+                "reference": "ad9e8cdf1b709caf84ca545ff90bcc7298f0fa5a",
                 "shasum": ""
             },
             "require": {
@@ -254,13 +268,13 @@
                     "email": "thflori@gmail.com"
                 }
             ],
-            "description": "Command line arguments parser for PHP 5.4 - 7.3",
+            "description": "Command line arguments parser for PHP 7.1 and above",
             "homepage": "http://getopt-php.github.io/getopt-php",
             "support": {
                 "issues": "https://github.com/getopt-php/getopt-php/issues",
-                "source": "https://github.com/getopt-php/getopt-php/tree/v4.0.0"
+                "source": "https://github.com/getopt-php/getopt-php/tree/v4.0.1"
             },
-            "time": "2021-05-02T13:05:10+00:00"
+            "time": "2022-01-04T11:01:04+00:00"
         }
     ],
     "packages-dev": [],
