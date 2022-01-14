@@ -17,7 +17,7 @@
 		"WP_Groove\\Unique_Attachment_Slugs__Tests\\" : "./tests/classes"
 	},
 	"scripts"           : {
-		"post-update-cmd" : "[ $COMPOSER_DEV_MODE -eq 0 ] || ./vendor/clevercanyon/wpgroove-framework/dev/toolchain/composer/post-update-cmd.php",
+		"post-update-cmd" : "[ $COMPOSER_DEV_MODE -eq 0 ] || ./vendor/clevercanyon/wpgroove-framework/dev/toolchain/composer/on-post-update-cmd",
 		"phpunit"         : "composer exec -- phpunit --configuration ./.phpunit.xml",
 		"webpack"         : "npx webpack --config ./.webpack.cjs"
 	},
@@ -25,7 +25,15 @@
 		"clevercanyon" : {
 			"$extends-packages" : [ "clevercanyon/wpgroove-framework" ],
 			"&"                 : {
-				"scoper" : {
+				"project"    : {
+					"data" : {
+						"version"    : "1.0.0",
+						"stable_tag" : "1.0.0",
+						"layout"     : "wp-plugin",
+						"name"       : "Unique Attachment Slugs"
+					}
+				},
+				"php_scoper" : {
 					"cfg" : {
 						"exclude-constants" : [ ],
 						"exclude-classes"   : [ ],

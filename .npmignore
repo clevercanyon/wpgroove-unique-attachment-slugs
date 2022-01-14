@@ -58,9 +58,11 @@ typings/
 .vscode/
 *.code-workspace
 
-# NPM
+# NPM & Yarn
 
 .npmrc
+.yarnrc
+.yarn/
 
 # Vendor
 
