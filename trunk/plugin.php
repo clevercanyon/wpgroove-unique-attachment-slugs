@@ -41,7 +41,7 @@
  *
  * @since 2021-12-25
  */
-declare( strict_types = 1 ); // ｡･:*:･ﾟ★.
+declare( strict_types = 1 );
 namespace WP_Groove\Unique_Attachment_Slugs;
 
 /**
@@ -49,19 +49,21 @@ namespace WP_Groove\Unique_Attachment_Slugs;
  *
  * @since 2021-12-15
  */
-use Clever_Canyon\Utilities\{STC as U};
-use Clever_Canyon\Utilities\OOP\{Offsets, Generic, Error, Exception, Fatal_Exception};
-use Clever_Canyon\Utilities\OOP\Abstracts\{A6t_Base, A6t_Offsets, A6t_Generic, A6t_Error, A6t_Exception};
-use Clever_Canyon\Utilities\OOP\Interfaces\{I7e_Base, I7e_Offsets, I7e_Generic, I7e_Error, I7e_Exception};
+use Clever_Canyon\{Utilities as U};
 
 /**
- * WP Groove utilities.
+ * Framework.
  *
  * @since 2021-12-15
  */
-use WP_Groove\Framework\Utilities\{STC as W};
-use WP_Groove\Framework\Plugin\Abstracts\{AA6t_Plugin};
-use WP_Groove\Framework\Utilities\OOP\Abstracts\{AA6t_App};
+use WP_Groove\{Framework as WPG};
+
+/**
+ * Plugin.
+ *
+ * @since 2021-12-15
+ */
+use WP_Groove\{Unique_Attachment_Slugs as WP};
 
 // </editor-fold>
 
@@ -86,7 +88,7 @@ require_once __DIR__ . '/vendor/autoload.php';
  *
  * @since 2021-12-15
  */
-Plugin::add_instance_hooks(
+WP\Plugin::add_instance_hooks(
 	__FILE__,
 	'Unique Attachment Slugs', // @name
 	'wpgroove-unique-attachment-slugs', // @slug

@@ -15,7 +15,7 @@
  *
  * @since 2021-12-25
  */
-declare( strict_types = 1 ); // ｡･:*:･ﾟ★.
+declare( strict_types = 1 );
 namespace WP_Groove\Unique_Attachment_Slugs;
 
 /**
@@ -23,19 +23,21 @@ namespace WP_Groove\Unique_Attachment_Slugs;
  *
  * @since 2021-12-15
  */
-use Clever_Canyon\Utilities\{STC as U};
-use Clever_Canyon\Utilities\OOP\{Offsets, Generic, Error, Exception, Fatal_Exception};
-use Clever_Canyon\Utilities\OOP\Abstracts\{A6t_Base, A6t_Offsets, A6t_Generic, A6t_Error, A6t_Exception};
-use Clever_Canyon\Utilities\OOP\Interfaces\{I7e_Base, I7e_Offsets, I7e_Generic, I7e_Error, I7e_Exception};
+use Clever_Canyon\{Utilities as U};
 
 /**
- * WP Groove utilities.
+ * Framework.
  *
  * @since 2021-12-15
  */
-use WP_Groove\Framework\Utilities\{STC as W};
-use WP_Groove\Framework\Plugin\Abstracts\{AA6t_Plugin};
-use WP_Groove\Framework\Utilities\OOP\Abstracts\{AA6t_App};
+use WP_Groove\{Framework as WPG};
+
+/**
+ * Plugin.
+ *
+ * @since 2021-12-15
+ */
+use WP_Groove\{Unique_Attachment_Slugs as WP};
 
 // </editor-fold>
 
@@ -44,7 +46,7 @@ use WP_Groove\Framework\Utilities\OOP\Abstracts\{AA6t_App};
  *
  * @since 2021-12-15
  */
-class Plugin extends AA6t_Plugin {
+class Plugin extends WPG\A6t\Plugin {
 	/**
 	 * On `init` hook.
 	 *
@@ -71,8 +73,8 @@ class Plugin extends AA6t_Plugin {
 	 * @return string                 Unique slug.
 	 */
 	public function on_wp_unique_post_slug( string $slug, int $post_id, string $post_status, string $post_type, int $parent_post_id, string $original_slug ) : string {
-		if ( 'attachment' === $post_type && ! preg_match( '/-cs-[a-z0-9]{8}$/ui', $slug ) ) {
-			$slug .= '-cs-' . hash( 'crc32b', $slug );
+		if ( 'attachment' === $post_type && ! preg_match( '/-x[a-z0-9]{11}$/ui', $slug ) ) {
+			$slug .= '-' . U\Crypto::x_sha( $slug, 12 );
 		}
 		return $slug;
 	}
