@@ -61,8 +61,18 @@ module.exports = ( env, argv ) => {
 	);
 
 	( config.assetDirs || [] ).forEach( ( assetsDir ) => {
-		assetsDir = path.resolve( __dirname, assetsDir );
+		const entryIndexes = []; // Initialize.
+		assetsDir          = path.resolve( __dirname, assetsDir );
 
+		if ( fs.existsSync( assetsDir + '/styles/index.scss' ) ) {
+			entryIndexes.push( assetsDir + '/styles/index.scss' );
+		}
+		if ( fs.existsSync( assetsDir + '/scripts/index.js' ) ) {
+			entryIndexes.push( assetsDir + '/scripts/index.js' );
+		}
+		if ( ! entryIndexes.length ) {
+			return; // No entry indexes available.
+		}
 		configs.push( mc.merge( {
 			cache   : false,
 			mode    : 'production',
@@ -94,10 +104,7 @@ module.exports = ( env, argv ) => {
 				],
 			},
 			entry   : {
-				index : [
-					assetsDir + '/styles/index.scss',
-					assetsDir + '/scripts/index.js',
-				],
+				index : entryIndexes,
 			},
 			output  : {
 				path     : assetsDir + '/webpack',

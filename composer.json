@@ -13,8 +13,8 @@
 		"clevercanyon/wpgroove-framework-dev" : "dev-main"
 	},
 	"autoload-dev"      : {
-		"files"                                       : [ "./.trunk.php" ],
-		"WP_Groove\\Unique_Attachment_Slugs__Tests\\" : "./tests/classes"
+		"WP_Groove\\Unique_Attachment_Slugs\\Tests\\" : [ "./tests/classes" ],
+		"files"                                       : [ "./trunk/plugin.php" ]
 	},
 	"scripts"           : {
 		"post-update-cmd"  : "[ $COMPOSER_DEV_MODE -eq 0 ] || ./vendor/clevercanyon/wpgroove-framework/dev/cli-tools/composer/on-post-update-cmd",
@@ -26,19 +26,14 @@
 		"clevercanyon" : {
 			"$extends-packages" : [ "clevercanyon/wpgroove-framework" ],
 			"&"                 : {
-				"project"    : {
+				"project" : {
 					"data" : {
-						"version"    : "1.0.0",
-						"stable_tag" : "1.0.0",
-						"layout"     : "wp-plugin",
-						"name"       : "Unique Attachment Slugs"
-					}
-				},
-				"php_scoper" : {
-					"cfg" : {
-						"exclude-constants" : [ ],
-						"exclude-classes"   : [ ],
-						"exclude-functions" : [ ]
+						"version"        : "1.0.0",
+						"stable_tag"     : "1.0.0",
+
+						"layout"         : "wp-plugin",
+						"namespace_crux" : "WP_Groove\\Unique_Attachment_Slugs",
+						"name"           : "Unique Attachment Slugs"
 					}
 				}
 			}

@@ -3,11 +3,11 @@
     "license": "GPL-2.0-or-later",
     "name": "package",
     "author": {
-        "name": "CLEVER CANYON",
+        "name": "Clever Canyon",
         "url": "https://clevercanyon.com"
     },
     "devDependencies": {
-        "@clevercanyon/php-js-utilities-dev-npm": "latest"
+        "@clevercanyon/utilities-dev-npm": "latest"
     },
     "config": {
         "clevercanyon": {
