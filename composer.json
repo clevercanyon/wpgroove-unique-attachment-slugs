@@ -17,10 +17,12 @@
 		"files"                                       : [ "./trunk/plugin.php" ]
 	},
 	"scripts"           : {
-		"post-update-cmd"  : "[ $COMPOSER_DEV_MODE -eq 0 ] || ./vendor/clevercanyon/wpgroove-framework/dev/cli-tools/composer/on-post-update-cmd",
-		"phpunit"          : "composer exec --profile -- phpunit --configuration ./.phpunit.xml --no-coverage",
-		"phpunit-coverage" : "XDEBUG_MODE=coverage composer exec --profile -- phpunit --configuration ./.phpunit.xml",
-		"webpack"          : "npx webpack --config ./.webpack.cjs"
+		"webpack"             : "npx webpack --config ./.webpack.cjs",
+		"update-mac-keychain" : "./ssl-ri-cas.sh add-to-mac-keychain",
+		"wp-docker"           : "./vendor/clevercanyon/utilities/dev/cli-tools/docker/wp",
+		"phpunit"             : "composer exec --profile -- phpunit --configuration ./.phpunit.xml --no-coverage --no-logging --do-not-cache-result",
+		"phpunit-coverage"    : "XDEBUG_MODE=coverage composer exec --profile -- phpunit --configuration ./.phpunit.xml",
+		"post-update-cmd"     : "[ $COMPOSER_DEV_MODE -eq 0 ] || ./vendor/clevercanyon/wpgroove-framework/dev/cli-tools/composer/on-post-update-cmd"
 	},
 	"extra"             : {
 		"clevercanyon" : {

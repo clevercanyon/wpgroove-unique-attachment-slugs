@@ -1,0 +1,89 @@
+#!/usr/bin/env bash
+
+# `composer run-script wp-docker -- [sub-command] [args]` alias.
+# Translates to: `./.wp-docker [sub-command] [args]`; which is much shorter.
+
+if [ -x ./dev/cli-tools/docker/wp ]; then
+    ./dev/cli-tools/docker/wp "${@}";
+else
+	./vendor/clevercanyon/utilities/dev/cli-tools/docker/wp "${@}";
+fi;
+# ---------------------------------------------------------------------------------------------------------------------
+# macOS Docker installation for compatibility with WP docker.
+# ---------------------------------------------------------------------------------------------------------------------
+# $ brew install --cask docker;
+# $ brew install chipmk/tap/docker-mac-net-connect;
+# $ sudo brew services start chipmk/tap/docker-mac-net-connect;
+# ---------------------------------------------------------------------------------------------------------------------
+
+# ---------------------------------------------------------------------------------------------------------------------
+# Bringing up or taking down a project, network, and containers:
+# ---------------------------------------------------------------------------------------------------------------------
+# $ ./.wp-docker up;                                         Brings network, volumes, and services up.
+# $ ./.wp-docker pause;                                      Pauses everything. Resume via `unpause`.
+# $ ./.wp-docker unpause;                                    Unpauses. Brings network, volumes, services back up.
+# $ ./.wp-docker down;                                       Brings everything down & permanently removes everything.
+# ---------------------------------------------------------------------------------------------------------------------
+
+# ---------------------------------------------------------------------------------------------------------------------
+# Review info & status of a project's containers:
+# ---------------------------------------------------------------------------------------------------------------------
+# $ ./.wp-docker info;                                       Shows all of a project's relevant details.
+# $ ./.wp-docker status;                                     Shows all of a project's containers.
+# ---------------------------------------------------------------------------------------------------------------------
+
+# ---------------------------------------------------------------------------------------------------------------------
+# Logging into a container (bash shell access):
+# ---------------------------------------------------------------------------------------------------------------------
+# $ ./.wp-docker bash;                                       Main `php` container as default user `www-data`.
+# $ ./.wp-docker bash [container-short-alias];               One of: `sql`, `mem`, `hog`, `php`, `pma`, `nxp`, `nxc`.
+# $ ./.wp-docker bash --user root;                           Main `php` container w/ root access.
+# $ ./.wp-docker bash --user root [container-short-alias];   A given container w/ root access.
+# ---------------------------------------------------------------------------------------------------------------------
+
+# ---------------------------------------------------------------------------------------------------------------------
+# Accessing Psysh in main `php` container (REPL already running vendor/autoload.php):
+# ---------------------------------------------------------------------------------------------------------------------
+# $ ./.wp-docker psysh;                                      Main `php` container as default user `www-data`.
+# $ ./.wp-docker psysh --user root;                          Main `php` container w/ root access.
+# ---------------------------------------------------------------------------------------------------------------------
+
+# ---------------------------------------------------------------------------------------------------------------------
+# Accessing WordPress in main `php` container (WP shell access):
+# ---------------------------------------------------------------------------------------------------------------------
+# $ ./.wp-docker shell;                                      Main `php` container as default user `www-data`.
+# $ ./.wp-docker shell --user root;                          Main `php` container w/ root access.
+# ---------------------------------------------------------------------------------------------------------------------
+
+# ---------------------------------------------------------------------------------------------------------------------
+# Following a container's logs:
+# ---------------------------------------------------------------------------------------------------------------------
+# $ ./.wp-docker logs;                                       Main `php` container.
+# $ ./.wp-docker logs [container-short-alias];               One of: `sql`, `mem`, `hog`, `php`, `pma`, `nxp`, `nxc`.
+# ---------------------------------------------------------------------------------------------------------------------
+
+# ---------------------------------------------------------------------------------------------------------------------
+# Inspecting a container (raw JSON configuration access):
+# ---------------------------------------------------------------------------------------------------------------------
+# $ ./.wp-docker inspect;                                    Main `php` container.
+# $ ./.wp-docker inspect [container-short-alias];            One of: `sql`, `mem`, `hog`, `php`, `pma`, `nxp`, `nxc`.
+# ---------------------------------------------------------------------------------------------------------------------
+
+# ---------------------------------------------------------------------------------------------------------------------
+# A few more examples showing use of docker directly:
+# ---------------------------------------------------------------------------------------------------------------------
+# $ docker compose ls;
+# $ docker inspect [project-slug]-network;
+# $ docker logs [project-slug]-[container-short-alias];
+# $ docker inspect [project-slug]-[container-short-alias];
+# $ docker attach [project-slug]-[container-short-alias];
+# $ docker exec -it [project-slug]-[container-short-alias] bash --login;
+# $ docker inspect --format '[format]' [project-slug]-[container-short-alias];
+# ---------------------------------------------------------------------------------------------------------------------
+
+# ---------------------------------------------------------------------------------------------------------------------
+# Suggested aliases for a `~/.profile` customization.
+# ---------------------------------------------------------------------------------------------------------------------
+# function d() { docker "${@}"; };
+# function dc() { docker compose "${@}"; };
+# function wpd() { ./.wp-docker "${@}"; };

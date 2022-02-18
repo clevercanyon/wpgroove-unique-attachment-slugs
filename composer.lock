@@ -59,16 +59,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.209.24",
+            "version": "3.209.26",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "ce68bfc141863a25f4b870f10cfa996312fb1813"
+                "reference": "bf29058fc637e4949ec42281e9572b9c968b38cc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/ce68bfc141863a25f4b870f10cfa996312fb1813",
-                "reference": "ce68bfc141863a25f4b870f10cfa996312fb1813",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/bf29058fc637e4949ec42281e9572b9c968b38cc",
+                "reference": "bf29058fc637e4949ec42281e9572b9c968b38cc",
                 "shasum": ""
             },
             "require": {
@@ -144,9 +144,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.209.24"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.209.26"
             },
-            "time": "2022-02-14T19:15:07+00:00"
+            "time": "2022-02-17T19:15:52+00:00"
         },
         {
             "name": "clevercanyon/standards",
@@ -195,12 +195,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/clevercanyon/utilities.git",
-                "reference": "5e5152ac872b5d22a3be97a7f2881a63b5340989"
+                "reference": "e010d42c738bf73a44cc1d329ec862965d5633a2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/clevercanyon/utilities/zipball/5e5152ac872b5d22a3be97a7f2881a63b5340989",
-                "reference": "5e5152ac872b5d22a3be97a7f2881a63b5340989",
+                "url": "https://api.github.com/repos/clevercanyon/utilities/zipball/e010d42c738bf73a44cc1d329ec862965d5633a2",
+                "reference": "e010d42c738bf73a44cc1d329ec862965d5633a2",
                 "shasum": ""
             },
             "require": {
@@ -216,6 +216,7 @@
                 "ext-fileinfo": "*",
                 "ext-intl": "*",
                 "ext-memcached": "*",
+                "ext-pcntl": "*",
                 "ext-posix": "*",
                 "ext-session": "*",
                 "ext-zip": "*",
@@ -301,7 +302,7 @@
                 "issues": "https://github.com/clevercanyon/utilities/issues",
                 "source": "https://github.com/clevercanyon/utilities/tree/main"
             },
-            "time": "2022-02-14T19:34:53+00:00"
+            "time": "2022-02-18T14:59:21+00:00"
         },
         {
             "name": "clevercanyon/utilities-dev",
@@ -309,12 +310,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/clevercanyon/utilities-dev.git",
-                "reference": "c75dc2174b723bc0b85b0d771a0782f19be67333"
+                "reference": "83f7ed729cd63ed1c76006cfa2c74edb92e55d93"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/clevercanyon/utilities-dev/zipball/c75dc2174b723bc0b85b0d771a0782f19be67333",
-                "reference": "c75dc2174b723bc0b85b0d771a0782f19be67333",
+                "url": "https://api.github.com/repos/clevercanyon/utilities-dev/zipball/83f7ed729cd63ed1c76006cfa2c74edb92e55d93",
+                "reference": "83f7ed729cd63ed1c76006cfa2c74edb92e55d93",
                 "shasum": ""
             },
             "require": {
@@ -325,8 +326,6 @@
                 "ext-intl": "*",
                 "ext-json": "*",
                 "ext-mbstring": "*",
-                "ext-memcached": "*",
-                "ext-posix": "*",
                 "ext-session": "*",
                 "ext-zip": "*",
                 "humbug/php-scoper": "dev-master",
@@ -337,6 +336,10 @@
                 "php-stubs/wordpress-stubs": ">=5.8.2",
                 "phpunit/phpunit": "^9.5",
                 "ulrichsg/getopt-php": "^4.0"
+            },
+            "suggest": {
+                "ext-memcached": "*",
+                "ext-posix": "*"
             },
             "default-branch": true,
             "type": "library",
@@ -356,7 +359,7 @@
                 "issues": "https://github.com/clevercanyon/utilities-dev/issues",
                 "source": "https://github.com/clevercanyon/utilities-dev/tree/main"
             },
-            "time": "2022-02-13T22:15:07+00:00"
+            "time": "2022-02-15T00:17:13+00:00"
         },
         {
             "name": "clevercanyon/utilities-dev-npm",
@@ -398,12 +401,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/clevercanyon/wpgroove-framework.git",
-                "reference": "e24d048765c95a4a5b445e990065e3b2d4edb7d3"
+                "reference": "66234f0d412f56fd9b9d7bb48c6a7508cc66544b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/clevercanyon/wpgroove-framework/zipball/e24d048765c95a4a5b445e990065e3b2d4edb7d3",
-                "reference": "e24d048765c95a4a5b445e990065e3b2d4edb7d3",
+                "url": "https://api.github.com/repos/clevercanyon/wpgroove-framework/zipball/66234f0d412f56fd9b9d7bb48c6a7508cc66544b",
+                "reference": "66234f0d412f56fd9b9d7bb48c6a7508cc66544b",
                 "shasum": ""
             },
             "require": {
@@ -476,7 +479,7 @@
                 "issues": "https://github.com/clevercanyon/wpgroove-framework/issues",
                 "source": "https://github.com/clevercanyon/wpgroove-framework/tree/main"
             },
-            "time": "2022-02-14T19:45:26+00:00"
+            "time": "2022-02-18T15:01:00+00:00"
         },
         {
             "name": "clevercanyon/wpgroove-framework-dev",
@@ -484,12 +487,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/clevercanyon/wpgroove-framework-dev.git",
-                "reference": "9e7de37cf922142bfa1b956440d55e0b54c80a45"
+                "reference": "862b35ec062dd6dd1a14391bc36476a6f1ebf4e6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/clevercanyon/wpgroove-framework-dev/zipball/9e7de37cf922142bfa1b956440d55e0b54c80a45",
-                "reference": "9e7de37cf922142bfa1b956440d55e0b54c80a45",
+                "url": "https://api.github.com/repos/clevercanyon/wpgroove-framework-dev/zipball/862b35ec062dd6dd1a14391bc36476a6f1ebf4e6",
+                "reference": "862b35ec062dd6dd1a14391bc36476a6f1ebf4e6",
                 "shasum": ""
             },
             "require": {
@@ -513,7 +516,7 @@
                 "issues": "https://github.com/clevercanyon/wpgroove-framework-dev/issues",
                 "source": "https://github.com/clevercanyon/wpgroove-framework-dev/tree/main"
             },
-            "time": "2022-02-14T17:43:09+00:00"
+            "time": "2022-02-18T15:00:32+00:00"
         },
         {
             "name": "composer/package-versions-deprecated",
@@ -2477,16 +2480,16 @@
         },
         {
             "name": "phpunit/php-code-coverage",
-            "version": "9.2.10",
+            "version": "9.2.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "d5850aaf931743067f4bfc1ae4cbd06468400687"
+                "reference": "665a1ac0a763c51afc30d6d130dac0813092b17f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/d5850aaf931743067f4bfc1ae4cbd06468400687",
-                "reference": "d5850aaf931743067f4bfc1ae4cbd06468400687",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/665a1ac0a763c51afc30d6d130dac0813092b17f",
+                "reference": "665a1ac0a763c51afc30d6d130dac0813092b17f",
                 "shasum": ""
             },
             "require": {
@@ -2542,7 +2545,7 @@
             ],
             "support": {
                 "issues": "https://github.com/sebastianbergmann/php-code-coverage/issues",
-                "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/9.2.10"
+                "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/9.2.11"
             },
             "funding": [
                 {
@@ -2550,7 +2553,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-12-05T09:12:13+00:00"
+            "time": "2022-02-18T12:46:09+00:00"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -2795,16 +2798,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "9.5.13",
+            "version": "9.5.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "597cb647654ede35e43b137926dfdfef0fb11743"
+                "reference": "1883687169c017d6ae37c58883ca3994cfc34189"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/597cb647654ede35e43b137926dfdfef0fb11743",
-                "reference": "597cb647654ede35e43b137926dfdfef0fb11743",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/1883687169c017d6ae37c58883ca3994cfc34189",
+                "reference": "1883687169c017d6ae37c58883ca3994cfc34189",
                 "shasum": ""
             },
             "require": {
@@ -2882,7 +2885,7 @@
             ],
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/9.5.13"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/9.5.14"
             },
             "funding": [
                 {
@@ -2894,7 +2897,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-01-24T07:33:35+00:00"
+            "time": "2022-02-18T12:54:07+00:00"
         },
         {
             "name": "psr/container",
