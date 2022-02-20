@@ -2,8 +2,8 @@
 /**
  * PHP Scoper config file (project-specific).
  *
- * You *CAN* edit this file. It can contain project-specific overrides.
- * This file is automatically detected by `./scoper.cfg.php` and merged in.
+ * You *can* edit this file. It can contain project-specific overrides.
+ * This file is automatically detected by `./config.php` and merged in.
  *
  * @see          https://github.com/humbug/php-scoper/blob/master/docs/configuration.md
  *
@@ -11,4 +11,5 @@
  * @noinspection ALL
  * phpcs:disableFile
  */
-return [];
+
+return []; // ← Your code here.
