@@ -26,41 +26,43 @@
 
 	defaultTestSuite="tests"
 	bootstrap="../../../tests/bootstrap.php"
-	cacheResultFile="../../../._x/phpunit/result.cache"
+	cacheResultFile="../../../._x/phpunit/~wp-docker/result.cache"
 
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.3/phpunit.xsd"
 >
-    <php>
-        <env name="IS_PHPUNIT" value="1" />
+	<php>
+		<env name="IS_PHPUNIT" value="1" />
+        <env name="IS_PHPUNIT_WP_DOCKER" value="1" />
     </php>
 
     <testsuites>
         <testsuite name="tests">
             <directory suffix="Tests.php">../../../tests/classes/Tests</directory>
+            <directory suffix="Tests.php">../../../tests/classes/WP_Docker</directory>
         </testsuite>
     </testsuites>
 
-    <coverage cacheDirectory="../../../._x/phpunit/coverage/._cache">
+    <coverage cacheDirectory="../../../._x/phpunit/~wp-docker/coverage/._cache">
         <include>
             <directory suffix=".php">../../../src</directory>
         </include>
         <report>
-            <xml outputDirectory="../../../._x/phpunit/coverage/xml" />
-            <html outputDirectory="../../../._x/phpunit/coverage/html" />
-            <clover outputFile="../../../._x/phpunit/coverage/clover.xml" />
-    		<crap4j outputFile="../../../._x/phpunit/coverage/crap4j.xml" threshold="50" />
-    		<text outputFile="../../../._x/phpunit/coverage/text.txt" />
-    		<php outputFile="../../../._x/phpunit/coverage/php.php" />
+            <xml outputDirectory="../../../._x/phpunit/~wp-docker/coverage/xml" />
+            <html outputDirectory="../../../._x/phpunit/~wp-docker/coverage/html" />
+            <clover outputFile="../../../._x/phpunit/~wp-docker/coverage/clover.xml" />
+    		<crap4j outputFile="../../../._x/phpunit/~wp-docker/coverage/crap4j.xml" threshold="50" />
+    		<text outputFile="../../../._x/phpunit/~wp-docker/coverage/text.txt" />
+    		<php outputFile="../../../._x/phpunit/~wp-docker/coverage/php.php" />
         </report>
     </coverage>
 
     <logging>
-		<junit outputFile="../../../._x/phpunit/logging/junit.xml" />
-		<teamcity outputFile="../../../._x/phpunit/logging/teamcity.txt" />
-		<testdoxHtml outputFile="../../../._x/phpunit/logging/testdox.html" />
-		<testdoxText outputFile="../../../._x/phpunit/logging/testdox.txt" />
-		<testdoxXml outputFile="../../../._x/phpunit/logging/testdox.xml" />
-		<text outputFile="../../../._x/phpunit/logging/text.txt" />
+		<junit outputFile="../../../._x/phpunit/~wp-docker/logging/junit.xml" />
+		<teamcity outputFile="../../../._x/phpunit/~wp-docker/logging/teamcity.txt" />
+		<testdoxHtml outputFile="../../../._x/phpunit/~wp-docker/logging/testdox.html" />
+		<testdoxText outputFile="../../../._x/phpunit/~wp-docker/logging/testdox.txt" />
+		<testdoxXml outputFile="../../../._x/phpunit/~wp-docker/logging/testdox.xml" />
+		<text outputFile="../../../._x/phpunit/~wp-docker/logging/text.txt" />
     </logging>
 </phpunit>

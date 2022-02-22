@@ -14,28 +14,19 @@
 # Source a few dependencies.
 # ---------------------------------------------------------------------------------------------------------------------
 
-if [[ -f /wp-docker/host/project/dev/utilities/load.bash ]]; then
-	. /wp-docker/host/project/dev/utilities/load.bash;
-	. /wp-docker/host/project/dev/utilities/bash/partials/require-root;
-	. /wp-docker/host/project/dev/utilities/bash/partials/require-wp-docker;
+if [[ -f "${WP_DOCKER_HOST_PROJECT_DIR}"/.c10n-utilities ]];
+	then c10n_utilities_path="${WP_DOCKER_HOST_PROJECT_DIR}";
+else c10n_utilities_path="${WP_DOCKER_HOST_PROJECT_DIR}"/vendor/clevercanyon/utilities; fi;
 
-elif [[ -f /wp-docker/host/project/vendor/clevercanyon/dev/utilities/load.bash ]]; then
-	. /wp-docker/host/project/vendor/clevercanyon/dev/utilities/load.bash;
-	. /wp-docker/host/project/vendor/clevercanyon/dev/utilities/bash/partials/require-root;
-	. /wp-docker/host/project/vendor/clevercanyon/dev/utilities/bash/partials/require-wp-docker;
+if [[ -f "${c10n_utilities_path}"/dev/utilities/load.bash ]]; then
+	. "${c10n_utilities_path}"/dev/utilities/load.bash;
+	. "${c10n_utilities_path}"/dev/utilities/bash/partials/require-root;
+	. "${c10n_utilities_path}"/dev/utilities/bash/partials/require-wp-docker;
 else
-	echo 'Missing required dependencies. Have you run `composer install` yet?'; exit 1;
+	echo 'Missing required dependency: `'"${c10n_utilities_path}"'`';
+	echo 'Have you run `composer install` yet?';
+	exit 1; # Exit w/ error status.
 fi;
-# ---------------------------------------------------------------------------------------------------------------------
-# Define a few variables.
-# ---------------------------------------------------------------------------------------------------------------------
-
-ROOT_HOME_DIR=/root;                                          # `root` user's home directory.
-WWW_DATA_HOME_DIR=/var/www;                                   # `www-data` user's home directory.
-WORDPRESS_DIR=/var/www/html;                                  # Apache `DOCUMENT_ROOT` directory.
-WORDPRESS_URL=https://"${WP_DOCKER_COMPOSE_PROJECT_SLUG}".wp; # Requires DNS mapping, which we do handle.
-PROJECT_DIR=/wp-docker/host/project;                          # Mounted by Docker; this is the host project directory.
-
 # ---------------------------------------------------------------------------------------------------------------------
 # Run parent container's entrypoint.
 # ---------------------------------------------------------------------------------------------------------------------
@@ -58,12 +49,12 @@ if [[ ! -f /wp-docker/container/setup-complete ]]; then
 	# This file has already been created by `/wp-docker/image/setup`.
 	# The `path:` is in there already. We need to add `url:` and `user:` now.
 	{
-		echo "url : ${WORDPRESS_URL}";
+		echo "url : ${WP_DOCKER_WORDPRESS_URL}";
 		echo "user: ${WP_DOCKER_WORDPRESS_ADMIN_USERNAME}";
-	} >> "${ROOT_HOME_DIR}"/.wp-cli/config.yml;
+	} >> "${WP_DOCKER_ROOT_HOME_DIR}"/.wp-cli/config.yml;
 
-	cp --preserve=all "${ROOT_HOME_DIR}"/.wp-cli/config.yml "${WWW_DATA_HOME_DIR}"/.wp-cli/config.yml;
-	chown www-data                                          "${WWW_DATA_HOME_DIR}"/.wp-cli/config.yml;
+	cp --preserve=all "${WP_DOCKER_ROOT_HOME_DIR}"/.wp-cli/config.yml "${WP_DOCKER_WEB_SERVER_USER_HOME_DIR}"/.wp-cli/config.yml;
+	chown "${WP_DOCKER_WEB_SERVER_USER}"                              "${WP_DOCKER_WEB_SERVER_USER_HOME_DIR}"/.wp-cli/config.yml;
 
 	# -----------------------------------------------------------------------------------------------------------------
 	# Install WordPress core.
@@ -96,7 +87,7 @@ if [[ ! -f /wp-docker/container/setup-complete ]]; then
 			echo 'RewriteRule ^(wp-(content|admin|includes).*) $1 [L]';
 			echo 'RewriteRule ^(.*\.php)$ $1 [L]';
 			echo 'RewriteRule . index.php [L]';
-		} > "${WORDPRESS_DIR}"/.htaccess;
+		} > "${WP_DOCKER_WORDPRESS_DIR}"/.htaccess;
 
 	elif [[ -n "${WP_DOCKER_WORDPRESS_MULTISITE_TYPE}" ]]; then
 		wp core multisite-convert --allow-root \
@@ -115,7 +106,7 @@ if [[ ! -f /wp-docker/container/setup-complete ]]; then
 			echo 'RewriteRule ^([_0-9a-zA-Z-]+/)?(wp-(content|admin|includes).*) $2 [L]';
 			echo 'RewriteRule ^([_0-9a-zA-Z-]+/)?(.*\.php)$ $2 [L]';
 			echo 'RewriteRule . index.php [L]';
-		} > "${WORDPRESS_DIR}"/.htaccess;
+		} > "${WP_DOCKER_WORDPRESS_DIR}"/.htaccess;
 	fi;
 	# -----------------------------------------------------------------------------------------------------------------
 	# Maybe update to latest version.
@@ -169,9 +160,9 @@ if [[ ! -f /wp-docker/container/setup-complete ]]; then
 
 	if [[ "${WP_DOCKER_COMPOSE_PROJECT_TYPE}" == 'library' \
 			&& "${WP_DOCKER_COMPOSE_PROJECT_LAYOUT}" == 'wp-plugin' \
-			&& -f "${PROJECT_DIR}"/trunk/plugin.php ]];
+			&& -f "${WP_DOCKER_HOST_PROJECT_DIR}"/trunk/plugin.php ]];
 	then
-		ln -s "${PROJECT_DIR}"/trunk "${WORDPRESS_DIR}"/wp-content/plugins/"${WP_DOCKER_COMPOSE_PROJECT_SLUG}";
+		ln -s "${WP_DOCKER_HOST_PROJECT_DIR}"/trunk "${WP_DOCKER_WORDPRESS_DIR}"/wp-content/plugins/"${WP_DOCKER_COMPOSE_PROJECT_SLUG}";
 
 		if [[ -n "${WP_DOCKER_WORDPRESS_MULTISITE_TYPE}" ]]; then
 			wp plugin activate "${WP_DOCKER_COMPOSE_PROJECT_SLUG}" --network --allow-root;
@@ -180,9 +171,9 @@ if [[ ! -f /wp-docker/container/setup-complete ]]; then
 		fi;
 	elif [[ "${WP_DOCKER_COMPOSE_PROJECT_TYPE}" == 'library' \
 			&& "${WP_DOCKER_COMPOSE_PROJECT_LAYOUT}" == 'wp-theme' \
-			&& -f "${PROJECT_DIR}"/trunk/theme.php ]];
+			&& -f "${WP_DOCKER_HOST_PROJECT_DIR}"/trunk/theme.php ]];
 	then
-		ln -s "${PROJECT_DIR}"/trunk "${WORDPRESS_DIR}"/wp-content/themes/"${WP_DOCKER_COMPOSE_PROJECT_SLUG}";
+		ln -s "${WP_DOCKER_HOST_PROJECT_DIR}"/trunk "${WP_DOCKER_WORDPRESS_DIR}"/wp-content/themes/"${WP_DOCKER_COMPOSE_PROJECT_SLUG}";
 
 		if [[ -n "${WP_DOCKER_WORDPRESS_MULTISITE_TYPE}" ]]; then
 			wp theme enable "${WP_DOCKER_COMPOSE_PROJECT_SLUG}" --network --activate --allow-root;
@@ -194,22 +185,22 @@ if [[ ! -f /wp-docker/container/setup-complete ]]; then
 	# Install `info.php` file for debugging.
 	# -----------------------------------------------------------------------------------------------------------------
 
-	echo '<?php phpinfo();' > "${WORDPRESS_DIR}"/info.php;
+	echo '<?php phpinfo();' > "${WP_DOCKER_WORDPRESS_DIR}"/info.php;
 
 	# -----------------------------------------------------------------------------------------------------------------
 	# Update WordPress directory permissions.
 	# -----------------------------------------------------------------------------------------------------------------
 
-	chown --recursive www-data "${WORDPRESS_DIR}";
-	find "${WORDPRESS_DIR}" -type d -exec chmod 0755 {} \;; # Includes the directory itself, too.
-	find "${WORDPRESS_DIR}" -type f -exec chmod 0644 {} \;; # All files, in this case.
+	chown --recursive "${WP_DOCKER_WEB_SERVER_USER}" "${WP_DOCKER_WORDPRESS_DIR}";
+	find "${WP_DOCKER_WORDPRESS_DIR}" -type d -exec chmod 0755 {} \;; # Includes the directory itself, too.
+	find "${WP_DOCKER_WORDPRESS_DIR}" -type f -exec chmod 0644 {} \;; # All files, in this case.
 fi;
 # ---------------------------------------------------------------------------------------------------------------------
 # Maybe run project-specific entrypoint hook.
 # ---------------------------------------------------------------------------------------------------------------------
 
-if [[ -x "${PROJECT_DIR}"/dev/.libs/docker/wp/entry~prj.bash ]]; then
-	"${PROJECT_DIR}"/dev/.libs/docker/wp/entry~prj.bash;
+if [[ -x "${WP_DOCKER_HOST_PROJECT_DIR}"/dev/.libs/docker/wp/entry~prj.bash ]]; then
+	. "${WP_DOCKER_HOST_PROJECT_DIR}"/dev/.libs/docker/wp/entry~prj.bash;
 fi;
 # ---------------------------------------------------------------------------------------------------------------------
 # Start Apache.

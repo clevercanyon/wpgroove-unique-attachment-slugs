@@ -151,3 +151,8 @@ Temporary Items
 Icon?
 !Icons
 ._*
+
+# Specifics
+
+/dev/.libs/docker/wp/.env
+/dev/.libs/docker/wp/compose-sym.yml

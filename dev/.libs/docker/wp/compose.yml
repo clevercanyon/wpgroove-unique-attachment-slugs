@@ -38,10 +38,10 @@ networks :
         name        : '${WP_DOCKER_COMPOSE_PROJECT_SLUG}-network'
         ipam        :
             driver : 'default'
-            config :
-                -
-                    subnet  : '172.72.0.0/16'
-                    gateway : '172.72.0.1'
+            # config :
+            #     -
+            #         subnet  : '172.72.0.0/16'
+            #         gateway : '172.72.0.1'
 volumes  :
     sql-data :
         name : '${WP_DOCKER_COMPOSE_PROJECT_SLUG}-sql-data'
@@ -179,6 +179,21 @@ services :
             VIRTUAL_HOST                             : '.${WP_DOCKER_COMPOSE_PROJECT_SLUG}.wp' # `.` at beginning matches exact name & wildcards.
             SELF_SIGNED_HOST                         : '${WP_DOCKER_COMPOSE_PROJECT_SLUG}.wp'  # Root of `VIRTUAL_HOST` for wildcard SSL certs.
 
+            # The `:?` forces these environment variables to be non-empty. Compliments of docker compose.
+            COMPOSE_PROJECT_NAME                     : '${COMPOSE_PROJECT_NAME:?Missing `COMPOSE_PROJECT_NAME` environment variable.}'
+            WP_DOCKER_COMPOSE_PHP_VERSION            : '${WP_DOCKER_COMPOSE_PHP_VERSION:?Missing `WP_DOCKER_COMPOSE_PHP_VERSION` environment variable.}'
+            WP_DOCKER_COMPOSE_PROJECT_SLUG           : '${WP_DOCKER_COMPOSE_PROJECT_SLUG:?Missing `WP_DOCKER_COMPOSE_PROJECT_SLUG` environment variable.}'
+            WP_DOCKER_COMPOSE_PROJECT_TYPE           : '${WP_DOCKER_COMPOSE_PROJECT_TYPE:?Missing `WP_DOCKER_COMPOSE_PROJECT_TYPE` environment variable.}'
+            WP_DOCKER_COMPOSE_PROJECT_LAYOUT         : '${WP_DOCKER_COMPOSE_PROJECT_LAYOUT:?Missing `WP_DOCKER_COMPOSE_PROJECT_LAYOUT` environment variable.}'
+
+            # Let's make it easy for scripts to work these things out.
+            WP_DOCKER_ROOT_HOME_DIR                  : '/root'                                 # The root user’s home directory.
+            WP_DOCKER_WEB_SERVER_USER                : 'www-data'                              # The web server runs as this user.
+            WP_DOCKER_WEB_SERVER_USER_HOME_DIR       : '/var/www'                              # The web server user’s home directory.
+            WP_DOCKER_HOST_PROJECT_DIR               : '/wp-docker/host/project'               # Where the host’s project lives.
+            WP_DOCKER_WORDPRESS_DIR                  : '/var/www/html'                         # Where WordPress lives.
+            WP_DOCKER_WORDPRESS_URL                  : 'https://${WP_DOCKER_COMPOSE_PROJECT_SLUG}.wp'
+
             # These get picked up by setup routines in parent image. Also used by `wp-config.php`.
             WORDPRESS_DB_HOST                        : 'sql:3306'                              # Database container name:port.
             WORDPRESS_DB_USER                        : 'wordpress'                             # WordPress database username.
@@ -213,13 +228,6 @@ services :
 
             # This tells `./entrypoint.sh` to install everything; i.e., more than necessary.
             WP_DOCKER_INSTALL_KITCHEN_SINK           : '${WP_DOCKER_INSTALL_KITCHEN_SINK:-}'
-
-            # The `:?` forces these environment variables to be non-empty. Compliments of docker compose.
-            COMPOSE_PROJECT_NAME                     : '${COMPOSE_PROJECT_NAME:?Missing `COMPOSE_PROJECT_NAME` environment variable.}'
-            WP_DOCKER_COMPOSE_PHP_VERSION            : '${WP_DOCKER_COMPOSE_PHP_VERSION:?Missing `WP_DOCKER_COMPOSE_PHP_VERSION` environment variable.}'
-            WP_DOCKER_COMPOSE_PROJECT_SLUG           : '${WP_DOCKER_COMPOSE_PROJECT_SLUG:?Missing `WP_DOCKER_COMPOSE_PROJECT_SLUG` environment variable.}'
-            WP_DOCKER_COMPOSE_PROJECT_TYPE           : '${WP_DOCKER_COMPOSE_PROJECT_TYPE:?Missing `WP_DOCKER_COMPOSE_PROJECT_TYPE` environment variable.}'
-            WP_DOCKER_COMPOSE_PROJECT_LAYOUT         : '${WP_DOCKER_COMPOSE_PROJECT_LAYOUT:?Missing `WP_DOCKER_COMPOSE_PROJECT_LAYOUT` environment variable.}'
 
         command        : '' # Ditch default CMD.
         entrypoint     : '/wp-docker/host/project/dev/.libs/docker/wp/entry.bash'

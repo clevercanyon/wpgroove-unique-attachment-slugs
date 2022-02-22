@@ -152,3 +152,8 @@ Icon?
 # LFS Storage
 
 /lfs/
+
+# Specifics
+
+/dev/.libs/docker/wp/.env
+/dev/.libs/docker/wp/compose-sym.yml

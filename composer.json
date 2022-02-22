@@ -13,25 +13,15 @@
 		"clevercanyon/wpgroove-framework-dev" : "dev-main"
 	},
 	"autoload-dev"      : {
-		"WP_Groove\\Unique_Attachment_Slugs\\Tests\\" : [ "./tests/classes" ],
-		"files"                                       : [ "./trunk/plugin.php" ]
+		"psr-4" : {
+			"Clever_Canyon\\Utilities\\Tests\\"                       : [ "./vendor/clevercanyon/utilities/tests/classes" ],
+			"WP_Groove\\Framework\\Tests\\"                           : [ "./vendor/clevercanyon/wpgroove-framework/tests/classes" ],
+			"WP_Groove\\LiteSpeed_Downloads_For_WooCommerce\\Tests\\" : [ "./tests/classes" ]
+		}
 	},
 	"scripts"           : {
-		"webpack"                  : "npx webpack --config ./dev/.libs/webpack/config.cjs",
-		"wp-docker"                : "./vendor/clevercanyon/utilities/dev/cli-tools/docker/wp/docker",
-
-		"phpunit"                  : "composer exec --profile -- phpunit --configuration ./dev/.libs/phpunit/config.xml --no-coverage --no-logging",
-		"phpunit~distro"           : "composer exec --profile -- phpunit --configuration ./dev/.libs/phpunit/config~distro.xml --no-coverage --no-logging",
-		"phpunit~coverage"         : "XDEBUG_MODE=coverage composer exec --profile -- phpunit --configuration ./dev/.libs/phpunit/config.xml --no-logging",
-
-		"phpunit~wp-docker"        : "composer exec --profile -- phpunit --configuration ./dev/.libs/phpunit/config.xml --no-coverage --no-logging --do-not-cache-result",
-		"phpunit~wp-docker~distro" : "composer exec --profile -- phpunit --configuration ./dev/.libs/phpunit/config~distro.xml --no-coverage --no-logging --do-not-cache-result",
-
-		"phpunit~ci"               : "composer exec --profile -- phpunit --configuration ./dev/.libs/phpunit/config.xml --no-coverage",
-		"phpunit~ci~distro"        : "composer exec --profile -- phpunit --configuration ./dev/.libs/phpunit/config~distro.xml --no-coverage",
-
-		"post-install-cmd"         : "[ $COMPOSER_DEV_MODE -eq 0 ] || ./vendor/clevercanyon/wpgroove-framework/dev/cli-tools/composer/on-post-install-cmd",
-		"post-update-cmd"          : "[ $COMPOSER_DEV_MODE -eq 0 ] || ./vendor/clevercanyon/wpgroove-framework/dev/cli-tools/composer/on-post-update-cmd"
+		"post-install-cmd" : "[ $COMPOSER_DEV_MODE -eq 0 ] || ./vendor/clevercanyon/wpgroove-framework/dev/cli-tools/composer/on-post-install-cmd",
+		"post-update-cmd"  : "[ $COMPOSER_DEV_MODE -eq 0 ] || ./vendor/clevercanyon/wpgroove-framework/dev/cli-tools/composer/on-post-update-cmd"
 	},
 	"extra"             : {
 		"clevercanyon" : {
