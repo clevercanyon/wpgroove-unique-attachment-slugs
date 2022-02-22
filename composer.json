@@ -20,6 +20,7 @@
 		}
 	},
 	"scripts"           : {
+		"compile"          : "COMPOSER_DEV_MODE=1 ./vendor/clevercanyon/wpgroove-framework/dev/cli-tools/composer/compile",
 		"post-install-cmd" : "[ $COMPOSER_DEV_MODE -eq 0 ] || ./vendor/clevercanyon/wpgroove-framework/dev/cli-tools/composer/on-post-install-cmd",
 		"post-update-cmd"  : "[ $COMPOSER_DEV_MODE -eq 0 ] || ./vendor/clevercanyon/wpgroove-framework/dev/cli-tools/composer/on-post-update-cmd"
 	},

@@ -99,6 +99,14 @@ case "${1:-}" in
 			./dev/cli-tools/php-scoper/config-file update;
 		fi;;
 
+	'compile') # {@see https://o5p.me/nCP9tQ}.
+		if confirm 'Compile. Are you sure?'; then
+		    composer compile "${@:2}";
+		else
+			exit 0; # Low confidence.
+		fi;
+		;;
+
 	'webpack')
 		npx webpack --config ./dev/.libs/webpack/config.cjs "${@:2}";
 		;;
