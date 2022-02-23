@@ -74,7 +74,7 @@ class Plugin extends WPG\A6t\Plugin {
 	 */
 	public function on_wp_unique_post_slug( string $slug, int $post_id, string $post_status, string $post_type, int $parent_post_id, string $original_slug ) : string {
 		if ( 'attachment' === $post_type && ! preg_match( '/-x[0-9a-f]{15}$/ui', $slug ) ) {
-			$slug .= '-' . U\Crypto::x_sha( $slug );
+			$slug .= '-' . U\Crypto::x_sha( $slug, 16 );
 		}
 		return $slug;
 	}

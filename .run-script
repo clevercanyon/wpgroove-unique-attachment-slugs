@@ -99,6 +99,10 @@ case "${1:-}" in
 			./dev/cli-tools/php-scoper/config-file update;
 		fi;;
 
+	'skeleton')
+		"${c10n_utilities_path}"/dev/cli-tools/composer/skeleton "${@:2}";
+		;;
+
 	'compile') # {@see https://o5p.me/nCP9tQ}.
 		if confirm 'Compile. Are you sure?'; then
 		    composer compile "${@:2}";
