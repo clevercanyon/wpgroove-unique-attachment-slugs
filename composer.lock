@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e6c80f69fc6c9f7c1ff5c1149d172269",
+    "content-hash": "8da2a97eff82f3cb06bd34739386093d",
     "packages": [],
     "packages-dev": [
         {
@@ -59,16 +59,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.209.29",
+            "version": "3.209.30",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "d2a7902ea12fbcfc26a0ae6a07d0e5f8c6e5e9a1"
+                "reference": "54c1e491b8de74360bbe94d727706db384c8d9a8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/d2a7902ea12fbcfc26a0ae6a07d0e5f8c6e5e9a1",
-                "reference": "d2a7902ea12fbcfc26a0ae6a07d0e5f8c6e5e9a1",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/54c1e491b8de74360bbe94d727706db384c8d9a8",
+                "reference": "54c1e491b8de74360bbe94d727706db384c8d9a8",
                 "shasum": ""
             },
             "require": {
@@ -144,9 +144,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.209.29"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.209.30"
             },
-            "time": "2022-02-22T19:14:12+00:00"
+            "time": "2022-02-23T19:14:31+00:00"
         },
         {
             "name": "clevercanyon/php-scoper",
@@ -276,12 +276,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/clevercanyon/utilities.git",
-                "reference": "df08b81c12bd9369f05c769014d85aae150086c8"
+                "reference": "24ea37efb54383e85da8eb57fca83ea73021275f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/clevercanyon/utilities/zipball/df08b81c12bd9369f05c769014d85aae150086c8",
-                "reference": "df08b81c12bd9369f05c769014d85aae150086c8",
+                "url": "https://api.github.com/repos/clevercanyon/utilities/zipball/24ea37efb54383e85da8eb57fca83ea73021275f",
+                "reference": "24ea37efb54383e85da8eb57fca83ea73021275f",
                 "shasum": ""
             },
             "require": {
@@ -385,7 +385,7 @@
                 "issues": "https://github.com/clevercanyon/utilities/issues",
                 "source": "https://github.com/clevercanyon/utilities/tree/main"
             },
-            "time": "2022-02-23T13:59:31+00:00"
+            "time": "2022-02-24T19:44:09+00:00"
         },
         {
             "name": "clevercanyon/utilities-dev",
@@ -2485,16 +2485,16 @@
         },
         {
             "name": "phpunit/php-code-coverage",
-            "version": "9.2.12",
+            "version": "9.2.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "c011a0b6aaa4acd2f39b7f51fb4ad4442b6ec631"
+                "reference": "deac8540cb7bd40b2b8cfa679b76202834fd04e8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/c011a0b6aaa4acd2f39b7f51fb4ad4442b6ec631",
-                "reference": "c011a0b6aaa4acd2f39b7f51fb4ad4442b6ec631",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/deac8540cb7bd40b2b8cfa679b76202834fd04e8",
+                "reference": "deac8540cb7bd40b2b8cfa679b76202834fd04e8",
                 "shasum": ""
             },
             "require": {
@@ -2550,7 +2550,7 @@
             ],
             "support": {
                 "issues": "https://github.com/sebastianbergmann/php-code-coverage/issues",
-                "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/9.2.12"
+                "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/9.2.13"
             },
             "funding": [
                 {
@@ -2558,7 +2558,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-02-23T06:30:26+00:00"
+            "time": "2022-02-23T17:02:38+00:00"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -2803,16 +2803,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "9.5.15",
+            "version": "9.5.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "dc738383c519243b0a967f63943a848d3fd861aa"
+                "reference": "5ff8c545a50226c569310a35f4fa89d79f1ddfdc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/dc738383c519243b0a967f63943a848d3fd861aa",
-                "reference": "dc738383c519243b0a967f63943a848d3fd861aa",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/5ff8c545a50226c569310a35f4fa89d79f1ddfdc",
+                "reference": "5ff8c545a50226c569310a35f4fa89d79f1ddfdc",
                 "shasum": ""
             },
             "require": {
@@ -2828,7 +2828,7 @@
                 "phar-io/version": "^3.0.2",
                 "php": ">=7.3",
                 "phpspec/prophecy": "^1.12.1",
-                "phpunit/php-code-coverage": "^9.2.12",
+                "phpunit/php-code-coverage": "^9.2.13",
                 "phpunit/php-file-iterator": "^3.0.5",
                 "phpunit/php-invoker": "^3.1.1",
                 "phpunit/php-text-template": "^2.0.3",
@@ -2890,7 +2890,7 @@
             ],
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/9.5.15"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/9.5.16"
             },
             "funding": [
                 {
@@ -2902,7 +2902,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-02-23T08:53:20+00:00"
+            "time": "2022-02-23T17:10:58+00:00"
         },
         {
             "name": "psr/container",
@@ -5616,5 +5616,8 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
+    "platform-overrides": {
+        "php-64bit": "7.4.0"
+    },
     "plugin-api-version": "2.2.0"
 }

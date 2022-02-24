@@ -3,6 +3,9 @@
 	"prefer-stable"     : true,
 	"minimum-stability" : "dev",
 	"config"            : {
+		"platform"      : {
+			"php-64bit" : "7.4.0"
+		},
 		"allow-plugins" : {
 			"dealerdirect/phpcodesniffer-composer-installer" : true,
 			"composer/package-versions-deprecated"           : true

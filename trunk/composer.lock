@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/clevercanyon/utilities.git",
-                "reference": "df08b81c12bd9369f05c769014d85aae150086c8"
+                "reference": "24ea37efb54383e85da8eb57fca83ea73021275f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/clevercanyon/utilities/zipball/df08b81c12bd9369f05c769014d85aae150086c8",
-                "reference": "df08b81c12bd9369f05c769014d85aae150086c8",
+                "url": "https://api.github.com/repos/clevercanyon/utilities/zipball/24ea37efb54383e85da8eb57fca83ea73021275f",
+                "reference": "24ea37efb54383e85da8eb57fca83ea73021275f",
                 "shasum": ""
             },
             "require": {
@@ -121,7 +121,7 @@
                 "issues": "https://github.com/clevercanyon/utilities/issues",
                 "source": "https://github.com/clevercanyon/utilities/tree/main"
             },
-            "time": "2022-02-23T13:59:31+00:00"
+            "time": "2022-02-24T19:44:09+00:00"
         },
         {
             "name": "clevercanyon/wpgroove-framework",
