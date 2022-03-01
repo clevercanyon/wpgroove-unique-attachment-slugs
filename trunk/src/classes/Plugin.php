@@ -46,7 +46,7 @@ use WP_Groove\{Unique_Attachment_Slugs as WP};
  *
  * @since 2021-12-15
  */
-class Plugin extends WPG\A6t\Plugin {
+final class Plugin extends WPG\A6t\Plugin {
 	/**
 	 * On `init` hook.
 	 *

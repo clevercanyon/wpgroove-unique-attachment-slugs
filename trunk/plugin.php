@@ -34,6 +34,8 @@
  *
  * Text Domain: wpgroove-unique-attachment-slugs
  * Domain Path: /languages
+ *
+ * Update URI: https://wpgroove.com/product/unique-attachment-slugs/update
  */
 
 /**
