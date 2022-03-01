@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "568596f8c447d19c7b416f777636db65",
+    "content-hash": "ce3491c1a7929cba2f5f7a5d064d921f",
     "packages": [
         {
             "name": "clevercanyon/utilities",
@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/clevercanyon/utilities.git",
-                "reference": "39ddf8c8dddc0a6be8cd813f1eb084717862277e"
+                "reference": "8053d56a22d0fac66672ab0504def71dfdae8bf3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/clevercanyon/utilities/zipball/39ddf8c8dddc0a6be8cd813f1eb084717862277e",
-                "reference": "39ddf8c8dddc0a6be8cd813f1eb084717862277e",
+                "url": "https://api.github.com/repos/clevercanyon/utilities/zipball/8053d56a22d0fac66672ab0504def71dfdae8bf3",
+                "reference": "8053d56a22d0fac66672ab0504def71dfdae8bf3",
                 "shasum": ""
             },
             "require": {
@@ -121,7 +121,7 @@
                 "issues": "https://github.com/clevercanyon/utilities/issues",
                 "source": "https://github.com/clevercanyon/utilities/tree/main"
             },
-            "time": "2022-03-01T11:32:17+00:00"
+            "time": "2022-03-01T19:42:27+00:00"
         },
         {
             "name": "clevercanyon/wpgroove-framework",
@@ -129,12 +129,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/clevercanyon/wpgroove-framework.git",
-                "reference": "dd6e5cb829e95e5134a644fe266027472e9fba05"
+                "reference": "ea278331a21e3594dbb4d0465a733973eaf44f23"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/clevercanyon/wpgroove-framework/zipball/dd6e5cb829e95e5134a644fe266027472e9fba05",
-                "reference": "dd6e5cb829e95e5134a644fe266027472e9fba05",
+                "url": "https://api.github.com/repos/clevercanyon/wpgroove-framework/zipball/ea278331a21e3594dbb4d0465a733973eaf44f23",
+                "reference": "ea278331a21e3594dbb4d0465a733973eaf44f23",
                 "shasum": ""
             },
             "require": {
@@ -207,7 +207,7 @@
                 "issues": "https://github.com/clevercanyon/wpgroove-framework/issues",
                 "source": "https://github.com/clevercanyon/wpgroove-framework/tree/main"
             },
-            "time": "2022-03-01T11:32:58+00:00"
+            "time": "2022-03-01T19:46:04+00:00"
         },
         {
             "name": "dflydev/dot-access-data",
@@ -669,25 +669,25 @@
         },
         {
             "name": "symfony/deprecation-contracts",
-            "version": "v3.0.0",
+            "version": "v2.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/deprecation-contracts.git",
-                "reference": "c726b64c1ccfe2896cb7df2e1331c357ad1c8ced"
+                "reference": "6f981ee24cf69ee7ce9736146d1c57c2780598a8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/deprecation-contracts/zipball/c726b64c1ccfe2896cb7df2e1331c357ad1c8ced",
-                "reference": "c726b64c1ccfe2896cb7df2e1331c357ad1c8ced",
+                "url": "https://api.github.com/repos/symfony/deprecation-contracts/zipball/6f981ee24cf69ee7ce9736146d1c57c2780598a8",
+                "reference": "6f981ee24cf69ee7ce9736146d1c57c2780598a8",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.0.2"
+                "php": ">=7.1"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "3.0-dev"
+                    "dev-main": "2.5-dev"
                 },
                 "thanks": {
                     "name": "symfony/contracts",
@@ -716,7 +716,7 @@
             "description": "A generic function and convention to trigger deprecation notices",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/deprecation-contracts/tree/v3.0.0"
+                "source": "https://github.com/symfony/deprecation-contracts/tree/v2.5.0"
             },
             "funding": [
                 {
@@ -732,7 +732,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-11-01T23:48:49+00:00"
+            "time": "2021-07-12T14:48:14+00:00"
         },
         {
             "name": "symfony/polyfill-php80",
@@ -829,7 +829,7 @@
     "platform": [],
     "platform-dev": [],
     "platform-overrides": {
-        "php-64bit": "7.4.0"
+        "php": "7.4.0"
     },
     "plugin-api-version": "2.2.0"
 }
