@@ -157,3 +157,8 @@ Icon?
 
 /dev/.libs/docker/wp/.env
 /dev/.libs/docker/wp/compose-sym.yml
+
+# For WordPress sites we want these.
+
+!/wp-includes/**/vendor/
+!/wp-content/**/vendor/
