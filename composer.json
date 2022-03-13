@@ -40,6 +40,9 @@
 						"namespace_crux" : "WP_Groove\\Unique_Attachment_Slugs",
 						"name"           : "Unique Attachment Slugs"
 					}
+				},
+				"webpack" : {
+					"assetDirs" : [ "../../../trunk/src/assets" ]
 				}
 			}
 		}

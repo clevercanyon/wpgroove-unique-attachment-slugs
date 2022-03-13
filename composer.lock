@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ca6e911c103ced82d010c583988024af",
+    "content-hash": "ee92273a4e0cceb761aed859f8c53541",
     "packages": [],
     "packages-dev": [
         {
@@ -59,16 +59,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.212.2",
+            "version": "3.212.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "dd2ff1ca2d7c37bfb7c3fed24cb8ad8bad604ec5"
+                "reference": "7f4c976df8a0fbe8d786e4b479d44e22478ce8af"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/dd2ff1ca2d7c37bfb7c3fed24cb8ad8bad604ec5",
-                "reference": "dd2ff1ca2d7c37bfb7c3fed24cb8ad8bad604ec5",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/7f4c976df8a0fbe8d786e4b479d44e22478ce8af",
+                "reference": "7f4c976df8a0fbe8d786e4b479d44e22478ce8af",
                 "shasum": ""
             },
             "require": {
@@ -144,9 +144,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.212.2"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.212.7"
             },
-            "time": "2022-03-04T19:27:01+00:00"
+            "time": "2022-03-11T19:14:33+00:00"
         },
         {
             "name": "clevercanyon/php-scoper",
@@ -235,12 +235,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/clevercanyon/standards.git",
-                "reference": "882621b5da7a5283def4d83afff50f53b7c9f46f"
+                "reference": "2b3467c5969e72120757c990bdc33c04f0d1914c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/clevercanyon/standards/zipball/882621b5da7a5283def4d83afff50f53b7c9f46f",
-                "reference": "882621b5da7a5283def4d83afff50f53b7c9f46f",
+                "url": "https://api.github.com/repos/clevercanyon/standards/zipball/2b3467c5969e72120757c990bdc33c04f0d1914c",
+                "reference": "2b3467c5969e72120757c990bdc33c04f0d1914c",
                 "shasum": ""
             },
             "require": {
@@ -268,7 +268,7 @@
                 "issues": "https://github.com/clevercanyon/standards/issues",
                 "source": "https://github.com/clevercanyon/standards/tree/main"
             },
-            "time": "2022-03-04T12:20:39+00:00"
+            "time": "2022-03-05T20:46:57+00:00"
         },
         {
             "name": "clevercanyon/utilities",
@@ -276,12 +276,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/clevercanyon/utilities.git",
-                "reference": "2fe541eec726d85172b22250d6f568a0b5957059"
+                "reference": "cfad930b2150f01a91d0d0a19d73af07538cbbbc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/clevercanyon/utilities/zipball/2fe541eec726d85172b22250d6f568a0b5957059",
-                "reference": "2fe541eec726d85172b22250d6f568a0b5957059",
+                "url": "https://api.github.com/repos/clevercanyon/utilities/zipball/cfad930b2150f01a91d0d0a19d73af07538cbbbc",
+                "reference": "cfad930b2150f01a91d0d0a19d73af07538cbbbc",
                 "shasum": ""
             },
             "require": {
@@ -386,7 +386,7 @@
                 "issues": "https://github.com/clevercanyon/utilities/issues",
                 "source": "https://github.com/clevercanyon/utilities/tree/main"
             },
-            "time": "2022-03-05T09:50:13+00:00"
+            "time": "2022-03-13T15:36:35+00:00"
         },
         {
             "name": "clevercanyon/utilities-dev",
@@ -394,12 +394,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/clevercanyon/utilities-dev.git",
-                "reference": "5ad85f29fcf7b708d88b43ff889c2f7419c276a2"
+                "reference": "8bd105dffd99774a9c5f598a89b9e1f0c9f436ec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/clevercanyon/utilities-dev/zipball/5ad85f29fcf7b708d88b43ff889c2f7419c276a2",
-                "reference": "5ad85f29fcf7b708d88b43ff889c2f7419c276a2",
+                "url": "https://api.github.com/repos/clevercanyon/utilities-dev/zipball/8bd105dffd99774a9c5f598a89b9e1f0c9f436ec",
+                "reference": "8bd105dffd99774a9c5f598a89b9e1f0c9f436ec",
                 "shasum": ""
             },
             "require": {
@@ -447,7 +447,7 @@
                 "issues": "https://github.com/clevercanyon/utilities-dev/issues",
                 "source": "https://github.com/clevercanyon/utilities-dev/tree/main"
             },
-            "time": "2022-03-05T09:49:57+00:00"
+            "time": "2022-03-13T14:39:11+00:00"
         },
         {
             "name": "clevercanyon/utilities-dev-npm",
@@ -489,12 +489,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/clevercanyon/wpgroove-framework.git",
-                "reference": "d53d92dcadbc98edb82e90ff5fc6a360d934088a"
+                "reference": "0773bedd42fc6484621a86f1429923b1b23f48bd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/clevercanyon/wpgroove-framework/zipball/d53d92dcadbc98edb82e90ff5fc6a360d934088a",
-                "reference": "d53d92dcadbc98edb82e90ff5fc6a360d934088a",
+                "url": "https://api.github.com/repos/clevercanyon/wpgroove-framework/zipball/0773bedd42fc6484621a86f1429923b1b23f48bd",
+                "reference": "0773bedd42fc6484621a86f1429923b1b23f48bd",
                 "shasum": ""
             },
             "require": {
@@ -526,10 +526,15 @@
                             "data": {
                                 "version": "1.0.0",
                                 "stable_tag": "1.0.0",
-                                "layout": "distro-lib",
+                                "layout": "library",
                                 "namespace_crux": "WP_Groove\\Framework",
                                 "name": "WP Groove: WordPress Framework"
                             }
+                        },
+                        "webpack": {
+                            "assetDirs": [
+                                "../../../src/assets/admin"
+                            ]
                         },
                         "post_cmd_handler": {
                             "symlink_local_packages": {
@@ -567,7 +572,7 @@
                 "issues": "https://github.com/clevercanyon/wpgroove-framework/issues",
                 "source": "https://github.com/clevercanyon/wpgroove-framework/tree/main"
             },
-            "time": "2022-03-05T09:51:24+00:00"
+            "time": "2022-03-13T15:38:03+00:00"
         },
         {
             "name": "clevercanyon/wpgroove-framework-dev",
@@ -575,12 +580,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/clevercanyon/wpgroove-framework-dev.git",
-                "reference": "32e658abcba14ee45f4cc19779eb3b537fa532d8"
+                "reference": "dd4c007276a32a8626c5cc1eb92a664d756bf5df"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/clevercanyon/wpgroove-framework-dev/zipball/32e658abcba14ee45f4cc19779eb3b537fa532d8",
-                "reference": "32e658abcba14ee45f4cc19779eb3b537fa532d8",
+                "url": "https://api.github.com/repos/clevercanyon/wpgroove-framework-dev/zipball/dd4c007276a32a8626c5cc1eb92a664d756bf5df",
+                "reference": "dd4c007276a32a8626c5cc1eb92a664d756bf5df",
                 "shasum": ""
             },
             "require": {
@@ -604,7 +609,7 @@
                 "issues": "https://github.com/clevercanyon/wpgroove-framework-dev/issues",
                 "source": "https://github.com/clevercanyon/wpgroove-framework-dev/tree/main"
             },
-            "time": "2022-03-05T09:50:30+00:00"
+            "time": "2022-03-13T14:40:23+00:00"
         },
         {
             "name": "composer/package-versions-deprecated",
@@ -2491,16 +2496,16 @@
         },
         {
             "name": "phpunit/php-code-coverage",
-            "version": "9.2.14",
+            "version": "9.2.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "9f4d60b6afe5546421462b76cd4e633ebc364ab4"
+                "reference": "2e9da11878c4202f97915c1cb4bb1ca318a63f5f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/9f4d60b6afe5546421462b76cd4e633ebc364ab4",
-                "reference": "9f4d60b6afe5546421462b76cd4e633ebc364ab4",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/2e9da11878c4202f97915c1cb4bb1ca318a63f5f",
+                "reference": "2e9da11878c4202f97915c1cb4bb1ca318a63f5f",
                 "shasum": ""
             },
             "require": {
@@ -2556,7 +2561,7 @@
             ],
             "support": {
                 "issues": "https://github.com/sebastianbergmann/php-code-coverage/issues",
-                "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/9.2.14"
+                "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/9.2.15"
             },
             "funding": [
                 {
@@ -2564,7 +2569,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-02-28T12:38:02+00:00"
+            "time": "2022-03-07T09:28:20+00:00"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -2809,16 +2814,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "9.5.16",
+            "version": "9.5.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "5ff8c545a50226c569310a35f4fa89d79f1ddfdc"
+                "reference": "1b5856028273bfd855e60a887278857d872ec67a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/5ff8c545a50226c569310a35f4fa89d79f1ddfdc",
-                "reference": "5ff8c545a50226c569310a35f4fa89d79f1ddfdc",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/1b5856028273bfd855e60a887278857d872ec67a",
+                "reference": "1b5856028273bfd855e60a887278857d872ec67a",
                 "shasum": ""
             },
             "require": {
@@ -2896,7 +2901,7 @@
             ],
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/9.5.16"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/9.5.18"
             },
             "funding": [
                 {
@@ -2908,7 +2913,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-02-23T17:10:58+00:00"
+            "time": "2022-03-08T06:52:28+00:00"
         },
         {
             "name": "psr/container",
@@ -4479,16 +4484,16 @@
         },
         {
             "name": "symfony/filesystem",
-            "version": "v5.4.5",
+            "version": "v5.4.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
-                "reference": "797680071ea8f71b94eb958680c50d0e002638f5"
+                "reference": "d53a45039974952af7f7ebc461ccdd4295e29440"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/filesystem/zipball/797680071ea8f71b94eb958680c50d0e002638f5",
-                "reference": "797680071ea8f71b94eb958680c50d0e002638f5",
+                "url": "https://api.github.com/repos/symfony/filesystem/zipball/d53a45039974952af7f7ebc461ccdd4295e29440",
+                "reference": "d53a45039974952af7f7ebc461ccdd4295e29440",
                 "shasum": ""
             },
             "require": {
@@ -4523,7 +4528,7 @@
             "description": "Provides basic utilities for the filesystem",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/filesystem/tree/v5.4.5"
+                "source": "https://github.com/symfony/filesystem/tree/v5.4.6"
             },
             "funding": [
                 {
@@ -4539,7 +4544,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-02-27T10:31:47+00:00"
+            "time": "2022-03-02T12:42:23+00:00"
         },
         {
             "name": "symfony/finder",
@@ -5456,24 +5461,25 @@
         },
         {
             "name": "ulrichsg/getopt-php",
-            "version": "v4.0.1",
+            "version": "v4.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/getopt-php/getopt-php.git",
-                "reference": "ad9e8cdf1b709caf84ca545ff90bcc7298f0fa5a"
+                "reference": "821d6118c3701a8ec83110e3c0726c92120959f8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/getopt-php/getopt-php/zipball/ad9e8cdf1b709caf84ca545ff90bcc7298f0fa5a",
-                "reference": "ad9e8cdf1b709caf84ca545ff90bcc7298f0fa5a",
+                "url": "https://api.github.com/repos/getopt-php/getopt-php/zipball/821d6118c3701a8ec83110e3c0726c92120959f8",
+                "reference": "821d6118c3701a8ec83110e3c0726c92120959f8",
                 "shasum": ""
             },
             "require": {
                 "ext-mbstring": "*",
-                "php": ">=7.1.0"
+                "php": ">=7.1 || ^8.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^7.5.20",
+                "limedeck/phpunit-detailed-printer": "*",
+                "phpunit/phpunit": "*",
                 "squizlabs/php_codesniffer": "^3.5.8"
             },
             "type": "library",
@@ -5500,9 +5506,9 @@
             "homepage": "http://getopt-php.github.io/getopt-php",
             "support": {
                 "issues": "https://github.com/getopt-php/getopt-php/issues",
-                "source": "https://github.com/getopt-php/getopt-php/tree/v4.0.1"
+                "source": "https://github.com/getopt-php/getopt-php/tree/v4.0.2"
             },
-            "time": "2022-01-04T11:01:04+00:00"
+            "time": "2022-03-11T17:04:44+00:00"
         },
         {
             "name": "webmozart/assert",
