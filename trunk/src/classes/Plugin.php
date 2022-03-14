@@ -48,12 +48,12 @@ use WP_Groove\{Unique_Attachment_Slugs as WP};
  */
 final class Plugin extends WPG\A6t\Plugin {
 	/**
-	 * On `init` hook.
+	 * Does hook setup on instantiation.
 	 *
 	 * @since 2021-12-15
 	 */
-	public function on_init() : void {
-		parent::on_init();
+	protected function setup_hooks() : void {
+		parent::setup_hooks();
 
 		add_filter( 'wp_unique_post_slug', [ $this, 'on_wp_unique_post_slug' ], 10, 6 );
 	}
@@ -70,7 +70,7 @@ final class Plugin extends WPG\A6t\Plugin {
 	 * @param int    $parent_post_id Post parent ID.
 	 * @param string $original_slug  Original slug.
 	 *
-	 * @return string                 Unique slug.
+	 * @return string                Unique slug.
 	 */
 	public function on_wp_unique_post_slug( string $slug, int $post_id, string $post_status, string $post_type, int $parent_post_id, string $original_slug ) : string {
 		if ( 'attachment' === $post_type && ! preg_match( '/-x[0-9a-f]{15}$/ui', $slug ) ) {
