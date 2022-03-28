@@ -325,7 +325,7 @@ services :
 
         environment    : # {@see https://o5p.me/bEtXkH}.
             DEFAULT_HOST : '${WP_DOCKER_COMPOSE_PROJECT_SLUG}.wp'
-            ENABLE_IPV6  : false # Disable for now.
+            ENABLE_IPV6  : 'false' # Disable for now.
 
         healthcheck    :
             test     : 'service nginx status || exit 1'

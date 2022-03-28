@@ -92,7 +92,7 @@ require_once __DIR__ . '/vendor/autoload.php';
  */
 WP\Plugin::add_instance_hooks(
 	__FILE__,
-	'Unique Attachment Slugs',          // @name
+	'Unique Attachment Slugs', // @name
 	'wpgroove-unique-attachment-slugs', // @slug
-	'1.0.0'                             // @version
+	'1.0.0' // @version
 );
