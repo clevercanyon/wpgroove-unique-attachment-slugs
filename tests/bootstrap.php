@@ -11,14 +11,6 @@
 // <editor-fold desc="Strict types, namespace, use statements, and other headers.">
 
 /**
- * Lint configuration.
- *
- * @since 2021-12-25
- *
- * phpcs:disable
- */
-
-/**
  * Declarations & namespace.
  *
  * @since 2021-12-25

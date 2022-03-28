@@ -35,7 +35,7 @@
  * Text Domain: wpgroove-unique-attachment-slugs
  * Domain Path: /languages
  *
- * Update URI: https://wpgroove.com/product/unique-attachment-slugs/update
+ * [x] Update URI: https://wpgroove.com/wp-json/c24s/v1/product/unique-attachment-slugs/wp-update
  */
 
 /**
@@ -92,7 +92,7 @@ require_once __DIR__ . '/vendor/autoload.php';
  */
 WP\Plugin::add_instance_hooks(
 	__FILE__,
-	'Unique Attachment Slugs', // @name
+	'Unique Attachment Slugs',          // @name
 	'wpgroove-unique-attachment-slugs', // @slug
-	'1.0.0' // @version
+	'1.0.0'                             // @version
 );
